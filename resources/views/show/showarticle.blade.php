@@ -54,7 +54,7 @@
 			</div>
 		</div>
         <div class="bg-white rounded-lg m-10 p-6"> 
-            <img class=" h-96 w-full rounded-xl m-auto" src="../images/{{$article->cover}}" alt="">
+            <img class="object-scale-down h-96 w-full rounded-xl m-auto" src="../images/{{$article->cover}}" alt="">
             <h1 class="text-3xl m-4 text-center">{{$article->title}}:</h1>
             <h1 class="text-2xl text-gray-800 m-4 text-center">{{$article->subtitle}}:</h1>
             <div class="bg-gray-700 p-2 m-4 flex flex-row justify-between rounded-xl">

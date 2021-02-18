@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\activities;
+use App\Models\pictures;
 use Illuminate\Http\Request;
 
 class ActivitiesController extends Controller
@@ -24,7 +25,7 @@ class ActivitiesController extends Controller
      */
     public function create()
     {
-        //
+        return view("create.newactivity");
     }
 
     /**
@@ -37,28 +38,30 @@ class ActivitiesController extends Controller
     {
         $req->validate([
             'imageFile' => 'required',
-            'imageFile.*' => 'mimes:jpeg,jpg,png,gif,csv,txt,pdf|max:2048'
+            'imageFile.*' => 'mimes:jpeg,jpg,png,gif|max:2048'
           ]);
-      
-          if($req->hasfile('imageFile')) {
-              foreach($req->file('imageFile') as $file)
-              {
-                  $name = $file->getClientOriginalName();
-                  $file->move(public_path().'/uploads/', $name);  
-                  $imgData[] = $name;  
-              }
-      
-              $fileModal = new Image();
-              $fileModal->name = json_encode($imgData);
-              $fileModal->image_path = json_encode($imgData);
-              
-             
-              $fileModal->save();
-      
-             return back()->with('success', 'File has successfully uploaded!');
-          }
+        if($req->hasfile('imageFile')) {
+            foreach($req->file('imageFile') as $file)
+            {
+                $name = $file->getClientOriginalName();
+                $file->move(public_path().'/uploads/', $name);  
+                $imgData[] = $name;  
+            }
+            $activity = new activities;
+            $activity->title = $req->title;
+            $activity->date = $req->date;
+            $activity->save();
+            $activity = activities::latest('created_at')->first();
+            $fileModal = new pictures();
+            $fileModal->name = json_encode($imgData);
+            $fileModal->image_path = json_encode($imgData);
+            $fileModal->activity_id = $activity->id;    
+            $fileModal->save();
+            return back()->with('success', 'File has successfully uploaded!');
         }
     }
+    
+
 
     /**
      * Display the specified resource.
@@ -66,9 +69,11 @@ class ActivitiesController extends Controller
      * @param  \App\Models\activities  $activities
      * @return \Illuminate\Http\Response
      */
-    public function show(activities $activities)
+    public function show($id)
     {
-        //
+        $activity = activities::find($id);
+        $pictures = pictures::find($id);
+        return view('show.showactivity')->with(['activity'=>$activity])->with(['pictures'=>$pictures]);
     }
 
     /**

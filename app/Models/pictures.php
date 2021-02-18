@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class pictures extends Model
 {
     use HasFactory;
-    public function activity()
+    public function activities()
     {
         return $this->belongsTo(activities::class);
     }
