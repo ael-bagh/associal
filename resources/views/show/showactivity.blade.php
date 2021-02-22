@@ -54,9 +54,13 @@
             </div>
         </div>
     </div>
-    <div class="m-4 p-4 grid grid-cols-4 bg-white shadow-2xl rounded-md">
+    <div class="flex flex-col bg-white m-10 p-10 shadow-xl rounded-xl">
+        <div class=" font-mono text-green-500 text-3xl">{{$activity->title}}</div>
+        <div class=" font-serif text-gray-700 text-xl">{{$activity->date}}</div>
+    </div>
+    <div class="flex flex-col m-10 p-10 bg-white shadow-2xl rounded-md gap-2">
     @foreach (json_decode($pictures->name, true) as $image)
-    <div class="grid col-span-1"><img src="{{ url('../uploads/' . $image) }}" alt=""></div> 
+    <div class="grid col-span-1"><img class="object-fill " src="{{ url('../uploads/' . $image) }}" alt=""></div> 
     @endforeach
     </div>
     		<!-- component -->

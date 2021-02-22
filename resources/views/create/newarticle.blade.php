@@ -78,7 +78,7 @@
                 <div class="flex justify-between items-center text-gray-400"> <span>type: image uniquement</span> <span class="flex items-center "></span></div>
                 <input class="focus:ring-2 ring-offset-green-500" type="text" name="title" id="" placeholder="Titre">
                 <input class="focus:ring-2 ring-offset-green-500" type="text" name="subtitle" placeholder="Soustitle">
-                <textarea class="ckeditor" name="content"></textarea>
+                <textarea class="ckeditor" id="editor1" name="content"></textarea>
                 <button class="p-4 bg-green-500 hover:bg-green-700" type="submit">create</button>
         </div>
         </form>
@@ -118,11 +118,12 @@
                 </div>
             </div>
         </footer>
-<script src="//cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>
-<script type="text/javascript">
-    $(document).ready(function () {
-        $('.ckeditor').ckeditor();
-    });
-</script>
+        <script src="//cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
+        <script src="//cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('.ckeditor').ckeditor();
+            });
+        </script>
 	</body>
 </html>

@@ -1,3 +1,15 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+@layer base{
+    .article p {
+        @apply text-gray-500 text-lg;
+    }
+    .article h1 {
+        @apply text-black text-2xl;
+    }
+    .article h2 {
+        @apply text-black text-2xl;
+    }
+}
