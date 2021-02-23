@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArticlesController;
 use App\Http\Controllers\ActivitiesController;
+use App\Http\Controllers\CommentsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,6 +25,7 @@ Route::get('/activity/{id}', [ActivitiesController::class, 'show']);
 Route::get('/createarticle', [ArticlesController::class, 'create']);
 Route::get('/createactivity', [ActivitiesController::class, 'create']);
 Route::post('/createactivity', [ActivitiesController::class, 'store']);
+Route::post('/createcomment', [CommentsController::class, 'store']);
 Route::post('/storearticle', [ArticlesController::class, 'store']);
 
 Route::get('/dashboard', function () {
