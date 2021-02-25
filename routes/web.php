@@ -22,11 +22,11 @@ Route::get('/', function () {
 Route::get('/articles', [ArticlesController::class, 'index'])->name('articles');
 Route::get('/article/{id}', [ArticlesController::class, 'show']);
 Route::get('/activity/{id}', [ActivitiesController::class, 'show']);
-Route::get('/createarticle', [ArticlesController::class, 'create']);
-Route::get('/createactivity', [ActivitiesController::class, 'create']);
-Route::post('/createactivity', [ActivitiesController::class, 'store']);
+Route::get('/createarticle', [ArticlesController::class, 'create'])->middleware('auth');
+Route::get('/createactivity', [ActivitiesController::class, 'create'])->middleware('auth');
+Route::post('/createactivity', [ActivitiesController::class, 'store'])->middleware('auth');
 Route::post('/createcomment', [CommentsController::class, 'store']);
-Route::post('/storearticle', [ArticlesController::class, 'store']);
+Route::post('/storearticle', [ArticlesController::class, 'store'])->middleware('auth');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
