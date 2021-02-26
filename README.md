@@ -1,16 +1,16 @@
 ## About Associal
 
-Associal est un plateform associative non-lucrative qui permet aux associations marocaine de creer des sites web gratuitement
+Associal est un plateform associative non-lucrative qui permet aux associations marocaines de creer des sites web gratuitement
 
-- Creation d'article
-- Creation d'evenement et d'activites
-- Reception de don
-- inscription des nouveaux membres
-- gestion des ressources
-- Edition de style du site et de son contenu
-- Vente E-commerce des produits des Coopérative
-- Financement participatif des activites socials et non-lucratifs
-- Creation de rapport
+- Creation d'article (Front-end ongoing)
+- Creation d'evenement et d'activites (Ongoing)
+- Reception de don (Coming soon)
+- inscription des nouveaux membres (Coming soon)
+- gestion des ressources (Coming soon)
+- Edition de style du site et de son contenu (Coming soon)
+- Vente E-commerce des produits des Coopérative (Coming soon)
+- Financement participatif des activites socials et non-lucratifs (Coming soon)
+- Creation de rapport (Coming soon)
 
 Associal a pour objectif principal la construction de la base d'une communauté numérique sociale où le partage, l'aide et le don n'ont pas de limites..
 
