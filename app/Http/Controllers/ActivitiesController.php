@@ -38,6 +38,7 @@ class ActivitiesController extends Controller
     {
         $req->validate([
             'imageFile' => 'required',
+            'cover' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
             'imageFile.*' => 'mimes:jpeg,jpg,png,gif|max:2048'
           ]);
         if($req->hasfile('imageFile')) {
@@ -50,6 +51,11 @@ class ActivitiesController extends Controller
             $activity = new activities;
             $activity->title = $req->title;
             $activity->date = $req->date;
+            $activity->address = $req->address;
+            $activity->ville = $req->ville;
+            $imageName = time().'.'.$req->cover->extension();  
+            $activity->cover = $imageName;
+            $req->cover->move(public_path('images'), $imageName);
             $activity->save();
             $activity = activities::latest('created_at')->first();
             $fileModal = new pictures();

@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArticlesController;
 use App\Http\Controllers\ActivitiesController;
 use App\Http\Controllers\CommentsController;
+use App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,7 +19,7 @@ use App\Http\Controllers\CommentsController;
 Route::get('/', function () {
     return view('wecomee');
 });
-
+Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/articles', [ArticlesController::class, 'index'])->name('articles');
 Route::get('/article/{id}', [ArticlesController::class, 'show']);
 Route::get('/activity/{id}', [ActivitiesController::class, 'show']);
