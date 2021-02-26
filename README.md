@@ -16,10 +16,10 @@ Associal a pour objectif principal la construction de la base d'une communauté 
 
 ## Donner un coup de main à ceux qui donnent leur cœur
 
-L'objectif principal des médias sociaux est d'aider les organisations à but non lucratif à atteindre leurs objectifs et à envoyer leurs messages sociaux sans avoir à penser aux petits details.
+L'objectif principal est d'aider les organisations à but non lucratif à atteindre leurs objectifs et à envoyer leurs messages sociaux sans avoir à penser aux petits details.
 
 ## clarté et transparence
 
 Pour qu'un travail social soit social, il doit être animé par l'amour et la passion!
-En gardant cela à l'esprit, associalmedia s'assurera que toutes les dépenses liées aux dons sont justifiées et ont atteint leur objectif avec l'idéologie principale à l'esprit: Pour la societe civile et par la societe civile
+En gardant cela à l'esprit, associal s'assurera que toutes les dépenses liées aux dons seront justifiées et ont atteindront leur objectif: Pour la societe civile et par la societe civile.
 
