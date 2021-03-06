@@ -17,7 +17,10 @@ class CreateUsersTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('picture');
+            $table->string('CIN')->unique();
             $table->foreignId('role_id')->constrained('roles');
+            $table->foreignId('donation_id')->constrained('donations');
+            $table->foreignId('history_id')->constrained('histories');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
